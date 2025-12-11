@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Nusantara - Gerbang Rasa Tradisional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <i class="fas fa-utensils splash-icon"></i>
+            <h1>Selamat Datang di Kuliner Nusantara</h1>
+            <p>Jelajahi keajaiban rasa Indonesia, warisan kuliner tak ternilai.</p>
+            <div class="splash-info">
+                <p>🇮🇩 Kekayaan Budaya & Rasa 🇮🇩</p>
+                <p class="splash-text">Klik untuk memulai pengalaman</p>
+            </div>
+            <button id="enter-website-btn" class="btn">Masuk ke Website</button>
+        </div>
+    </div>
+    
+    <div id="main-content" class="hidden">
+        
+        <header>
+            <div class="container">
+                <h1 class="logo"><a href="#">Kuliner Tradisional Nusantara</a></h1>
+                <nav>
+                    <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-item">Beranda</a></li>
+                        <li><a href="#rekomendasi" class="nav-item">Rekomendasi Chef</a></li>
+                        <li><a href="#kuliner-grid-list" class="nav-item">10 Kuliner Terbaik</a></li>
+                        <li><a href="#resep" class="nav-item">Resep Pilihan</a></li>
+                        <li><a href="#tentang" class="nav-item">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                </div>
+        </header>
+
+        <main id="batik-background-section" class="batik-background">
+            
+            <section id="home" class="hero-new page-section active-section">
+                <div class="container">
+                    <h2>Galeri Rasa di Nusantara</h2>
+                    <p>Temukan sajian tradisional Nusantara, seindah filosofi batik yang mendalam.</p>
+                    <a href="#rekomendasi" class="btn">Jelajahi Kuliner</a>
+                </div>
+            </section>
+            
+            <section id="rekomendasi" class="recommendation-section page-section hidden">
+                <div class="container">
+                    <h3>🏆 Rekomendasi Chef Hari Ini</h3>
+                    <div id="chef-recommendation" class="chef-card">
+                        <div class="recommend-loading">
+                            <i class="fas fa-utensils fa-spin"></i> Memuat rekomendasi...
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kuliner-grid-list" class="kuliner-list-section page-section hidden">
+                <div class="container">
+                    <h3>10 Kuliner Tradisional Pilihan</h3>
+                    <div class="kuliner-grid" id="kuliner-list">
+                        </div>
+                </div>
+            </section>
+            
+            <section id="resep" class="recipe-section page-section hidden">
+                <div class="container">
+                    <h3>📖 Panduan Resep Populer</h3>
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <h4>Resep Rendang Daging Sapi</h4>
+                            <p>Pelajari cara membuat Rendang kering yang otentik dan tahan lama dengan bumbu rempah melimpah.</p>
+                            <a href="#" class="btn-small" data-recipe="rendang">Lihat Langkah-langkah</a>
+                        </div>
+                         <div class="recipe-card">
+                            <h4>Resep Bumbu Dasar Bali (Base Genep)</h4>
+                            <p>Kunci dari semua masakan Bali yang kaya rasa, termasuk Ayam Betutu dan Sate Lilit.</p>
+                            <a href="#" class="btn-small" data-recipe="basegenep">Lihat Langkah-langkah</a>
+                        </div>
+                         <div class="recipe-card">
+                            <h4>Membuat Kuah Cuko Pempek Sempurna</h4>
+                            <p>Trik untuk mendapatkan kuah cuka yang hitam pekat, pedas, dan asam manis yang seimbang.</p>
+                            <a href="#" class="btn-small" data-recipe="cuko">Lihat Langkah-langkah</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tentang" class="about-section page-section hidden">
+                <div class="container">
+                    <h3>Tentang Kami</h3>
+                    <p>Kami selaku Kelompok 5 dari kelas X-2 mendedikasikan platform ini untuk melestarikan resep kuno dan kisah di balik setiap masakan. Kuliner adalah jembatan budaya, dan kami hadir sebagai pemandu Anda.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Kuliner Nusantara. Warisan Budaya Indonesia.</p>
+            </div>
+        </footer>
+        
+        <div id="kuliner-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modal-nama">Nama Kuliner</h2>
+                <p class="modal-asal" id="modal-asal">Asal Daerah</p>
+                <img id="modal-gambar" src="" alt="Gambar Kuliner" class="modal-image">
+                
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="deskripsi">Deskripsi</button>
+                    <button class="tab-btn" data-tab="fakta">Fakta Unik</button>
+                    <button class="tab-btn" data-tab="sejarah">Sejarah</button>
+                </div>
+                
+                <div id="tab-deskripsi" class="tab-content active">
+                    <h4>Deskripsi Singkat</h4>
+                    <p id="deskripsi-text"></p>
+                </div>
+                <div id="tab-fakta" class="tab-content">
+                    <h4>Fakta Menarik</h4>
+                    <p id="fakta-text"></p>
+                </div>
+                <div id="tab-sejarah" class="tab-content">
+                    <h4>Asal Usul dan Sejarah</h4>
+                    <p id="sejarah-text"></p>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
